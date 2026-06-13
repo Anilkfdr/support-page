@@ -1,34 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>App Support</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 600px;
-        margin: 40px auto;
-        padding: 20px;
-        line-height: 1.6;
-    }
-    h1 { color: #333; }
-    a { color: #0066cc; }
-</style>
-</head>
-<body>
-    <h1>App Support</h1>
-    <p>Merhaba! Uygulamanızla ilgili yardım almak için aşağıdaki iletişim adresini kullanabilirsiniz.</p>
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destek — Doğruluk mu Cesaret mi?</title>
+    <style>
+      :root {
+        --bg: #160828;
+        --bg2: #2a0d52;
+        --card: rgba(170, 120, 255, 0.1);
+        --border: rgba(190, 150, 255, 0.22);
+        --text: #ffffff;
+        --muted: #d6c6ff;
+        --accent: #c77dff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(900px 600px at 20% -10%, #5b1aa0, transparent 60%),
+          linear-gradient(160deg, var(--bg), var(--bg2));
+        background-attachment: fixed;
+        line-height: 1.7;
+        padding: 48px 18px 80px;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        background: var(--card);
+        border: 1.5px solid var(--border);
+        border-radius: 22px;
+        padding: 38px 28px;
+        backdrop-filter: blur(12px);
+      }
+      .emoji { font-size: 3.4rem; }
+      h1 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+        margin: 8px 0 4px;
+        background: linear-gradient(100deg, #fff, var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sub { color: var(--muted); margin: 0 0 26px; }
+      h2 { margin-top: 32px; font-size: 1.25rem; color: var(--accent); }
+      p, li { color: #f1ebff; }
+      a { color: var(--accent); }
+      .faq {
+        background: rgba(0, 0, 0, 0.18);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px 18px;
+        margin: 12px 0;
+      }
+      .faq strong { color: #fff; }
+      .contact {
+        margin-top: 30px;
+        text-align: center;
+        background: linear-gradient(100deg, #9b3dff, #c77dff);
+        border-radius: 16px;
+        padding: 22px;
+      }
+      .contact a {
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.15rem;
+        text-decoration: none;
+        word-break: break-all;
+      }
+      footer {
+        max-width: 760px;
+        margin: 24px auto 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div style="text-align: center">
+        <div class="emoji">🎲</div>
+        <h1>Destek</h1>
+        <p class="sub">Doğruluk mu Cesaret mi? — Yardım Merkezi</p>
+      </div>
 
-    <h2>📩 Contact</h2>
-    <p>Email: <a href="anilkafadar74@gmail.com">seninmail@adresin.com</a></p>
+      <p>
+        Merhaba! 👋 <strong>Doğruluk mu Cesaret mi?</strong> uygulamasını
+        kullanırken aklına takılan her şey için buradayız. Aşağıdaki sık sorulan
+        soruları inceleyebilir veya bize doğrudan yazabilirsin.
+      </p>
 
-    <h2>📘 FAQ</h2>
-    <ul>
-        <li>Uygulama çalışmıyor → Lütfen cihazınızı yeniden başlatıp tekrar deneyin.</li>
-        <li>Hata bildirimi → Mail yoluyla ekran görüntüsü gönderin.</li>
-        <li>Ödeme sorunları → App Store’dan abonelik bölümünü kontrol edin.</li>
-    </ul>
+      <h2>Sık Sorulan Sorular</h2>
 
-    <p>Teşekkürler!</p>
-</body>
+      <div class="faq">
+        <strong>Oyun nasıl oynanır?</strong>
+        <p>
+          Oyuna başla, bir zorluk seç (Kolay / Orta / Zor / Hardcore), oyuncuları
+          isim ve cinsiyetiyle ekle. Çarkı çevir; seçilen oyuncu "Doğruluk" ya da
+          "Cesaret" seçer ve karşısına çıkan görevi yapar. Diğer oyuncular onu
+          puanlar, oyun sonunda şampiyon belli olur! 🏆
+        </p>
+      </div>
+
+      <div class="faq">
+        <strong>İnternet gerekiyor mu?</strong>
+        <p>Hayır. Uygulama tamamen çevrimdışı çalışır. Hesap veya giriş gerekmez.</p>
+      </div>
+
+      <div class="faq">
+        <strong>Verilerim toplanıyor mu?</strong>
+        <p>
+          Hayır. Hiçbir kişisel veri toplamıyoruz. Girdiğin oyuncu isimleri
+          yalnızca o oturum için cihazında tutulur, uygulama kapanınca silinir.
+          Ayrıntı için
+          <a href="https://anilkfdr.github.io/dogruluk--cesaret-privacy/privacy.html">Gizlilik Politikası</a>.
+        </p>
+      </div>
+
+      <div class="faq">
+        <strong>Uygulama ücretli mi?</strong>
+        <p>Tamamen ücretsiz. Reklam yok, uygulama içi satın alma yok.</p>
+      </div>
+
+      <div class="faq">
+        <strong>Hardcore modu nedir?</strong>
+        <p>
+          Yetişkinlere yönelik (17+), daha cesur içerik barındıran moddur. Lütfen
+          karşılıklı rıza ve sorumlulukla oynayın.
+        </p>
+      </div>
+
+      <div class="faq">
+        <strong>Bir hata buldum / önerim var.</strong>
+        <p>Harika! Aşağıdaki e-postadan bize ulaş, en kısa sürede dönüş yapalım.</p>
+      </div>
+
+      <div class="contact">
+        <p style="margin: 0 0 6px; color: #fff">📩 Bize ulaş</p>
+        <a href="mailto:anilkafadar74@gmail.com">anilkafadar74@gmail.com</a>
+        <p style="margin: 10px 0 0; color: rgba(255,255,255,0.85); font-size: 0.9rem">
+          Genellikle 48 saat içinde yanıt veriyoruz.
+        </p>
+      </div>
+    </div>
+    <footer>© 2026 Doğruluk mu Cesaret mi? · Bir öğrenci tarafından sevgiyle yapıldı 🎓</footer>
+  </body>
 </html>
